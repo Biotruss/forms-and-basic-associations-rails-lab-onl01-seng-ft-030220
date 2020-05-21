@@ -7,11 +7,10 @@ class SongsController < ApplicationController
     @song = Song.find(params[:id])
   end
 
-  def new
+def new
     @song = Song.new
-    2.times { @song.notes.build }
-
     @genres = Genre.all
+    3.times { @song.notes.build }
   end
 
   def create

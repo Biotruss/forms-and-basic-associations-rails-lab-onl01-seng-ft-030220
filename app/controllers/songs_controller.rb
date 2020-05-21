@@ -11,7 +11,6 @@ class SongsController < ApplicationController
     @song = Song.new
     2.times { @song.notes.build }
 
-    @artists = Artist.all
     @genres = Genre.all
   end
 

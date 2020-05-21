@@ -9,6 +9,10 @@ class SongsController < ApplicationController
 
   def new
     @song = Song.new
+    2.times { @song.notes.build }
+
+    @artists = Artist.all
+    @genres = Genre.all
   end
 
   def create
